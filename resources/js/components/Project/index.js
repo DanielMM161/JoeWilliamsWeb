@@ -10,7 +10,7 @@ const nl2br = (str) => str.split("\n").map((item, key) => (
  */
 const FirstElement = ({ description, type }) => (
     <div className="FirstElement">
-        <div className="desc" style={{ fontSize: (description.length > 100 && window.innerWidth < 800) ? '11px' : '14px' }}>
+        <div className="desc" style={{ fontSize: (description.length > 100 && window.innerWidth < 800) ? '10px' : '10px' }}>
             {nl2br(description)}
         </div>
         <div className="type">{nl2br(type)}</div>
@@ -76,8 +76,6 @@ const ProjectController = ({ project = {} }) => {
                         <ImgWrapper src={project.img.img3} alt={project.title} size="big" />
                         <ImgWrapper src={project.img.img4} alt={project.title} size="big" />
                         <ImgWrapper src={project.img.img5} alt={project.title} size="big" />
-                        <ImgWrapper src={project.img.img6} alt={project.title} size="big" />
-                        <ImgWrapper src={project.img.img7} alt={project.title} size="big" />
                     </Project>
                 );
 
