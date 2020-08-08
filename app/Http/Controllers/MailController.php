@@ -9,7 +9,7 @@ class MailController extends Controller
 {
     public function send(Request $request) 
     {
-        $destinatario = "diabeticman666@gmail.com";
+        $destinatario = "jtsw.design@gmail.com";
         $name           = $request->name;
         $subject        = $request->subject;
         $email          = $request->email;

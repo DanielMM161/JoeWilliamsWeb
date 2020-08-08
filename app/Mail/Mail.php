@@ -36,7 +36,7 @@ class Mail extends Mailable
     public function build()
     {
         return $this->view("correos/bienvenida")
-            ->from("danielmmarquez161@gmail.com")
+            ->from($this->email)
             ->subject($this->subject);
     }
 }

@@ -29,16 +29,9 @@ const Contact = () => {
     }
 
     const hadleSubmit = (event) => {
+        setShowSpinner(true)   
         event.preventDefault();
-        setShowSpinner(true)
-        
-        // sendEmail();
-
-        setTimeout(() => {
-            setsentEmail(true)
-            setShowSpinner(false)
-            setShowModal(true)
-        }, 1000);
+        sendEmail();
     }
 
     const sendEmail = () => {

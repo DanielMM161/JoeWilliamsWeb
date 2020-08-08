@@ -86583,14 +86583,9 @@ var Contact = function Contact() {
   };
 
   var hadleSubmit = function hadleSubmit(event) {
+    setShowSpinner(true);
     event.preventDefault();
-    setShowSpinner(true); // sendEmail();
-
-    setTimeout(function () {
-      setsentEmail(true);
-      setShowSpinner(false);
-      setShowModal(true);
-    }, 1000);
+    sendEmail();
   };
 
   var sendEmail = function sendEmail() {

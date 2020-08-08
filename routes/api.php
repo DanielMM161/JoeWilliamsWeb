@@ -22,7 +22,5 @@ Route::get('expositions', 'ExpositionsController@index');
  
 Route::get('expositions/{exposition}', 'ExpositionsController@show');
 
-// Route::post('sendMail','MailController@send');
-
 Route::post("sendMail", "MailController@send");
   
