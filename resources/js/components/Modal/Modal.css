@@ -15,12 +15,12 @@
   color: white;
   background-color: rgb(70, 64, 70);
   width: 100%;
-  padding: 50px 0px;
+  padding: 100px 0px;
   position: relative;
   flex-flow: column;
   margin: 13px;
 }
 
 .text-modal {
-  font-size: 1em;
+  font-size: 1.2em;
 }
