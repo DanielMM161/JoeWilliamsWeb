@@ -6565,7 +6565,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "button {\r\n  outline:none;\r\n}\r\n.modal-button {\r\n  margin-top: 30px;\r\n  cursor: pointer;\r\n  background: transparent;\r\n  border: 2px solid white;\r\n  color: white;\r\n  font-weight: bold;\r\n  display: flex;\r\n  width: 135px;\r\n  height: 30px;\r\n}\r\n\r\n.modal-button a {\r\n  font-size: 12px;\r\n  color: white;\r\n}\r\n.modal-button {\r\n  font-size: 10px;\r\n}\r\n.submit {\r\n  cursor: pointer;\r\n  background: transparent;\r\n  border: 2px solid white;\r\n  color: white;\r\n  display: flex;\r\n  width: 200px;\r\n  height: 52px;\r\n  margin: auto;\r\n  margin-top: 59px;\r\n  margin-bottom: 45px;\r\n  font-size: medium;\r\n  font-weight: bold;\r\n}\r\n", ""]);
+exports.push([module.i, "button {\r\n  outline:none;\r\n}\r\n.modal-button {\r\n  margin-top: 30px;\r\n  cursor: pointer;\r\n  background: transparent;\r\n  border: 2px solid white;\r\n  color: white;\r\n  font-weight: bold;\r\n  display: flex;\r\n  width: 135px;\r\n  height: 30px;\r\n}\r\n\r\n.modal-button a {\r\n  color: white;\r\n}\r\n\r\n.submit {\r\n  cursor: pointer;\r\n  background: transparent;\r\n  border: 2px solid white;\r\n  color: white;\r\n  display: flex;\r\n  width: 200px;\r\n  height: 52px;\r\n  margin: auto;\r\n  margin-top: 59px;\r\n  margin-bottom: 45px;\r\n  font-size: medium;\r\n  font-weight: bold;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6660,7 +6660,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".overlay {\r\n  position: fixed;\r\n  top: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  left: 0;\r\n  height: 100%;\r\n  background-color: rgba(0,0,0,0.4);\r\n  display: flex;\r\n  align-items: flex-end;\r\n}\r\n\r\n.modal {\r\n  text-align: center;\r\n  color: white;\r\n  background-color: rgb(70, 64, 70);\r\n  width: 100%;\r\n  padding: 100px 0px;\r\n  position: relative;\r\n  flex-flow: column;\r\n  margin: 13px;\r\n}\r\n\r\n.text-modal {\r\n  font-size: 1.2em;\r\n}", ""]);
+exports.push([module.i, ".overlay {\r\n  position: fixed;\r\n  top: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  left: 0;\r\n  height: 100%;\r\n  background-color: rgba(0,0,0,0.4);\r\n  display: flex;\r\n  align-items: flex-end;\r\n}\r\n\r\n.modal {\r\n  text-align: center;\r\n  color: white;\r\n  background-color: rgb(70, 64, 70);\r\n  width: 100%;\r\n  height: 50vh;\r\n  position: relative;\r\n  flex-flow: column;\r\n  margin: 13px;\r\n}\r\n\r\n.text-modal {\r\n  font-size: 1.2em;\r\n}", ""]);
 
 // exports
 
@@ -85700,7 +85700,7 @@ var Modal = function Modal(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "overlay"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal flex alignc"
+    className: "modal flex alignc justifyc"
   }, showMessageEmail(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Buttons__WEBPACK_IMPORTED_MODULE_2__["Button"], {
     text: sentEmail ? 'HOME' : 'RETRY',
     type: "button",
@@ -86583,8 +86583,8 @@ var Contact = function Contact() {
   };
 
   var hadleSubmit = function hadleSubmit(event) {
-    setShowSpinner(true);
     event.preventDefault();
+    setShowSpinner(true);
     sendEmail();
   };
 

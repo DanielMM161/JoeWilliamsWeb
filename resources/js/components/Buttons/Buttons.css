@@ -14,12 +14,9 @@ button {
 }
 
 .modal-button a {
-  font-size: 12px;
   color: white;
 }
-.modal-button {
-  font-size: 10px;
-}
+
 .submit {
   cursor: pointer;
   background: transparent;

@@ -21,7 +21,7 @@ export const Modal = ({sentEmail,onClickButton}) => {
     }
     return(
         <div className="overlay">
-        <div className="modal flex alignc">
+        <div className="modal flex alignc justifyc">
             {
                 showMessageEmail()
             }

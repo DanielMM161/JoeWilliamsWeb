@@ -27,10 +27,10 @@ class DatabaseSeeder extends Seeder
             )
         );
         Expositions::create([
-            'title' => "Let's talk about the c-word",
-            'description' => "In this book I dive into the history of one of the most most offensive words. In the English language, the word cunt. Detailing the complex history and evolution of the word. The book also includes an interview with Rachel Miles a Senior Lecturer in VIsual Culture at UWE, where we have and in depth conversation on the words role in modern culture and how it has come to have so much power.",
-            'type' => "Editorial Design & Custom Bookbinding",
-            'details' => "The rose on the books cover has been laser cut into the card and the book's spine is made from sandpaper to give the book a rough texture as soon as you pick it up.",
+            'title' => "Let's Talk About The C-Word",
+            'description' => "In this book, I dive into the history of one of the most offensive words in the English language, the word cunt. Detailing the complex history and evolution of the word, The book also includes an interview with Rachel Miles a Senior Lecturer in Visual Culture at UWE, where we have an in-depth conversation on the role of the word in modern culture and how it has come to have so much power.",
+            'type' => "Editorial Design, Research & Custom Bookbinding",
+            'details' => "The rose was laser cut into the front cover and the spine of the book is made with sandpaper to give the book a rough texture as soon as you pick it up.",
             'img' =>  $coverCunt,
         ]);
 
@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
         );
         Expositions::create([
             'title' => "Velvet",
-            'description' => "Concept clothing for creatives. \n velvet is aN ONGOING collaboration with local businesses to create hand made garments. using organic fabrics & natural dyeS WE ARE HOPING FOR A SUSTAINABLE ALTERNATIVE TO THE FASHION INDUSTRIALISED FASHION INDUSTRY.",
+            'description' => "Velvet is a collaborative design practice aimed to help engage people in a creative lifestyle, we make limited items all of which are handcrafted in the South of Spain. \n\n Working side by side with different creatives and local businesses, we strive to inspire a more ethical & sustainable choice in the creative industry. \n\n Already encouraging creative collaborations between different artists, we aim to encompass an array of elements within a creative lifestyle, ranging from bespoke clothing to experimental art books, furniture, and more. \n\n If you would like to take part in our collaborative journey don't hesitate to send us a message.",
             'type' => "Art Direction & Fashion Design",
             'details' => "",
             'img' => $velvet
@@ -64,8 +64,8 @@ class DatabaseSeeder extends Seeder
         );
         Expositions::create([
             'title' => "Sync",
-            'description' => "A scupture representing a visual analisis of human synchronization through rhythm in a confined space. The sculpture consists of a pattern created by peoples movements in response to the sounds they hear. The pattern is divided in to specific time frames that have each been screen printed on layers of perspex, as the rythm progresses you can see the fluctuations of synchronised movements move through the crowd. The layers are then held together by two concrete blocks that emulate the walls of this confined space.",
-            'type' => "Editorial Design & Custom Bookbinding",
+            'description' => "A sculpture representing a visual analysis of human synchronization through rhythm in a confined space. The sculpture consists of a pattern created by people's movements in response to the sounds they hear. The pattern is divided into specific time frames that have each been screen printed on layers of perspex, as the rhythm progresses you can see the fluctuations of synchronized movements move through the crowd. The layers are then held together by two concrete blocks that emulate the walls of this confined space.",
+            'type' => "Conceptual Design using mixed media.",
             'details' => "",
             'img' => $sync,
         ]);
@@ -81,15 +81,13 @@ class DatabaseSeeder extends Seeder
                 "img4"  => "/image/Final_flamingo_the_fucking_final_one14.jpg",
                 "img5"  => "/image/Final_flamingo_the_fucking_final_one16.jpg",
                 "img6"  => "/image/Final_flamingo_the_fucking_final_one19.jpg",
-                // "img7"  => "",
-                // "img8"  => ""
             )
         );
         Expositions::create([
             'title' => "Fluttering Flamingo",
             'description' => "A publication analysing the flamingos flight patterns and yearly migration. This is a fascinating moment in nature as these birds are capable of migrating miles, at the exact date every year, from all over the world to lake Nakuru.",
             'type' => "Editorial Design & Custom Bookbinding",
-            'details' => "The publication also features fold out pages showing the birds flight formations. \n These pages are designed to mimic the flamingos wing span.",
+            'details' => "The publication also features fold-out pages showing the bird's flight formations. \n These pages are designed to mimic the flamingo's wingspan.",
             'img' => $finalFlamingo,
         ]);
 
@@ -98,12 +96,13 @@ class DatabaseSeeder extends Seeder
         $synchronicity = json_encode(
             array(
                 "cover" => "/image/syncvid.jpg",
-                "img1"  => "/image/syncvid.jpg"
+                "img1"  => "/image/syncvid.jpg",
+                "video" => "https://vimeo.com/300053745"
             )
         );
         Expositions::create([
             'title' => "Synchronicity",
-            'description' => "A moving image piece on Carl Jung's theory of Synchronicity. \n Many of my projects stem from his research in to this subject. There is still so much we dont know when ir comes to the subconcious connections humans have with eachother and this fascinates me. Small details in movements and behaviour that sometimes go unnoticed can often stem from a depp and complex proccess in our subconcious.",
+            'description' => "A moving image piece on Carl Jung’s theory of Synchronicity. \n Many of my projects stem from his research on this subject. There is still so much we don't know when it comes to the subconscious connections humans have with each other and this fascinates me. Small details in movements and behavior that sometimes go unnoticed can often stem from a deep and complex process in our subconscious.",
             'type' => "Moving Image & Sound Design",
             'details' => "",
             'img' => $synchronicity,
@@ -124,7 +123,7 @@ class DatabaseSeeder extends Seeder
         );
         Expositions::create([
             'title' => "The Lara Logan Case",
-            'description' => "On Feb. 11, 2011 the journalist Lara Logan had suffered a brutal sexual assault by Egyptian men in the middle of hundreds of people during the anti-Mubarak celebration in the Tahrir Square. The blame for what  had happened has been thrown at many different groups, but this publication takes a look at the situation from many different angles, analysing mob mentality and previous reference groups to try and understand why the mob of 200 men began this public attack.",
+            'description' => "On Feb. 11, 2011 the journalist Lara Logan had suffered a brutal sexual assault by Egyptian men in the middle of hundreds of people during the anti-Mubarak celebration in the Tahrir Square. The blame for what had happened has been thrown at many different groups, but this publication takes a look at the situation from many different angles, analyzing mob mentality and previous reference groups to try and understand why the mob of 200 men began this public attack.",
             'type' => "Editorial Design",
             'details' => "Writing by Elaine Replogle",
             'img' => $laraLogan,
@@ -142,7 +141,7 @@ class DatabaseSeeder extends Seeder
             'title' => "The Dark Elf",
             'description' => "Photography colaboration with makeup artist Ira Kamu.",
             'type' => "",
-            'details' => "Portrait Photography.",
+            'details' => "Photography.",
             'img' => $darkElf,
         ]);
 
@@ -160,7 +159,7 @@ class DatabaseSeeder extends Seeder
         );
         Expositions::create([
             'title' => "Human Herd Mentality",
-            'description' => "A publication exploring herd mentality within humans. Analysing certain situations where people, once becoming part of a large group,  lose their individuality and their power to reason for themselves. These situations result in the individuals behaviour becoming out of the ordinary.",
+            'description' => "A publication exploring herd mentality within humans. Analyzing certain situations where people, once becoming part of a large group,  lose their individuality and their power to reason for themselves. These situations result in an individual's behavior becoming out of the ordinary.",
             'type' => "Editorial Design",
             'details' => "",
             'img' =>  $humanHerd,

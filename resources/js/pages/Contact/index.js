@@ -29,8 +29,8 @@ const Contact = () => {
     }
 
     const hadleSubmit = (event) => {
-        setShowSpinner(true)   
         event.preventDefault();
+        setShowSpinner(true)   
         sendEmail();
     }
 
