@@ -85303,12 +85303,13 @@ if(false) {}
 /*!**************************************************!*\
   !*** ./resources/js/components/Buttons/index.js ***!
   \**************************************************/
-/*! exports provided: Button */
+/*! exports provided: Button, ButtonLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return Button; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonLink", function() { return ButtonLink; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Buttons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Buttons.css */ "./resources/js/components/Buttons/Buttons.css");
@@ -85326,9 +85327,20 @@ var Button = function Button(_ref) {
     type: type,
     className: "".concat(clase, " alignc justifyc"),
     onClick: onClick
-  }, text === 'HOME' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+  }, text);
+};
+var ButtonLink = function ButtonLink(_ref2) {
+  var text = _ref2.text,
+      type = _ref2.type,
+      clase = _ref2.clase,
+      onClick = _ref2.onClick;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: type,
+    className: "".concat(clase, " alignc justifyc"),
+    onClick: onClick
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/home"
-  }, text) : text);
+  }, text));
 };
 
 /***/ }),
@@ -85701,11 +85713,15 @@ var Modal = function Modal(_ref) {
     className: "overlay"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "modal flex alignc justifyc"
-  }, showMessageEmail(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Buttons__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-    text: sentEmail ? 'HOME' : 'RETRY',
+  }, showMessageEmail(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), sentEmail ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Buttons__WEBPACK_IMPORTED_MODULE_2__["ButtonLink"], {
+    text: 'HOME',
+    type: "button",
+    clase: "modal-button"
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Buttons__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+    text: 'RETRY',
     type: "button",
     clase: "modal-button",
-    onClick: sentEmail ? undefined : onClickButton
+    onClick: onClickButton
   })));
 };
 
@@ -86603,8 +86619,8 @@ var Contact = function Contact() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Contact-Container flex justifyc"
   }, showModal ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Modal__WEBPACK_IMPORTED_MODULE_5__["Modal"], {
-    sentEmail: sentEmail,
-    onClickButton: function onClickButton() {
+    sentEmail: true,
+    onClickButton: function onClickButton(event) {
       return setShowModal(false);
     }
   }) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SpaceBetween__WEBPACK_IMPORTED_MODULE_4__["SpaceBetween"], {

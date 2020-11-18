@@ -48,11 +48,9 @@ const Contact = () => {
 
     return(
         <div className="Contact-Container flex justifyc">
-            {
-                showModal ? <Modal sentEmail={sentEmail} onClickButton={() => setShowModal(false)}/> : ''
-            }
+            {showModal ? <Modal sentEmail={sentEmail} onClickButton={() => setShowModal(false)}/> : ''}
             <SpaceBetween height="45vh" />
-            <Form onSubmit={hadleSubmit} onChange={handleInputChange} showSpinner={showSpinner}/>
+            <Form onSubmit={handleSubmit} onChange={handleInputChange} showSpinner={showSpinner}/>
         </div>
     );
 }
