@@ -35,19 +35,15 @@ const Contact = () => {
     }
 
     const sendEmail = () => {
-        axios.post('/api/sendMail', form).then( resp => {
-            setsentEmail(true)
-            setShowSpinner(false)
-            setShowModal(true)
-         }).catch((error) => {
-             setsentEmail(false)
-             setShowSpinner(false)
-             setShowModal(true)
-         })
+        setsentEmail(true)
+        setShowSpinner(false)
+        setShowModal(true)
+         
     }
 
     return(
         <div className="Contact-Container flex justifyc">
+            <div>ESTO ES UNA PRUEBA</div>
             {showModal ? <Modal sentEmail={sentEmail} onClickButton={() => setShowModal(false)}/> : ''}
             <SpaceBetween height="45vh" />
             <Form onSubmit={handleSubmit} onChange={handleInputChange} showSpinner={showSpinner}/>
